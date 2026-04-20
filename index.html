@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lélek Harmony Masszázs by Vivienne</title>
+    <meta
+      name="description"
+      content="Lazító, frissítő, regeneráló masszázsok Tökölön. Svéd masszázs, köpöly, hát-nyak-váll masszázs elérhető áron."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#hero" class="nav__logo">
+          <span class="nav__logo-main">Lélek Harmony</span>
+          <span class="nav__logo-sub">Masszázs by Vivienne</span>
+        </a>
+        <button class="nav__toggle" id="navToggle" aria-label="Menü megnyitása">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__menu" id="navMenu">
+          <li><a href="#about" class="nav__link">Rólam</a></li>
+          <li><a href="#services" class="nav__link">Szolgáltatások</a></li>
+          <li><a href="#gallery" class="nav__link">Galéria</a></li>
+          <li>
+            <a href="#contact" class="nav__link nav__link--cta">Kapcsolat</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="hero">
+        <div class="hero__overlay"></div>
+        <div class="hero__content container">
+          <p class="hero__tag reveal">Tököl · Csépi út 213.</p>
+          <h1 class="hero__title reveal">
+            Masszázs Tökölön,<br /><em>elérhető áron</em>
+          </h1>
+          <p class="hero__subtitle reveal">
+            Ne csak túléld – érezd jól magad a testedben!
+          </p>
+          <a href="#contact" class="btn btn--primary reveal"
+            >Időpont foglalás</a
+          >
+        </div>
+        <div class="hero__scroll-hint">
+          <span></span>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about" id="about">
+        <div class="container about__grid">
+          <div class="about__deco reveal">
+            <div class="about__deco-inner">
+              <!-- Lotus flower — spa / massage theme -->
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <g transform="translate(100,115)">
+                  <!-- Outer petals — layer 1 (5×, aligned) -->
+                  <path fill="#C9A84C" opacity="0.12" d="M0,0 C-18,-35 -14,-70 0,-88 C14,-70 18,-35 0,0Z"/>
+                  <path fill="#C9A84C" opacity="0.12" d="M0,0 C-18,-35 -14,-70 0,-88 C14,-70 18,-35 0,0Z" transform="rotate(72)"/>
+                  <path fill="#C9A84C" opacity="0.12" d="M0,0 C-18,-35 -14,-70 0,-88 C14,-70 18,-35 0,0Z" transform="rotate(144)"/>
+                  <path fill="#C9A84C" opacity="0.12" d="M0,0 C-18,-35 -14,-70 0,-88 C14,-70 18,-35 0,0Z" transform="rotate(216)"/>
+                  <path fill="#C9A84C" opacity="0.12" d="M0,0 C-18,-35 -14,-70 0,-88 C14,-70 18,-35 0,0Z" transform="rotate(288)"/>
+                  <!-- Outer petals — layer 2 (5×, +36° eltolva) -->
+                  <path fill="#C9A84C" opacity="0.18" d="M0,0 C-15,-30 -12,-62 0,-78 C12,-62 15,-30 0,0Z" transform="rotate(36)"/>
+                  <path fill="#C9A84C" opacity="0.18" d="M0,0 C-15,-30 -12,-62 0,-78 C12,-62 15,-30 0,0Z" transform="rotate(108)"/>
+                  <path fill="#C9A84C" opacity="0.18" d="M0,0 C-15,-30 -12,-62 0,-78 C12,-62 15,-30 0,0Z" transform="rotate(180)"/>
+                  <path fill="#C9A84C" opacity="0.18" d="M0,0 C-15,-30 -12,-62 0,-78 C12,-62 15,-30 0,0Z" transform="rotate(252)"/>
+                  <path fill="#C9A84C" opacity="0.18" d="M0,0 C-15,-30 -12,-62 0,-78 C12,-62 15,-30 0,0Z" transform="rotate(324)"/>
+                  <!-- Középső szirmok (5×) -->
+                  <path fill="#C9A84C" opacity="0.30" d="M0,0 C-11,-22 -9,-48 0,-60 C9,-48 11,-22 0,0Z"/>
+                  <path fill="#C9A84C" opacity="0.30" d="M0,0 C-11,-22 -9,-48 0,-60 C9,-48 11,-22 0,0Z" transform="rotate(72)"/>
+                  <path fill="#C9A84C" opacity="0.30" d="M0,0 C-11,-22 -9,-48 0,-60 C9,-48 11,-22 0,0Z" transform="rotate(144)"/>
+                  <path fill="#C9A84C" opacity="0.30" d="M0,0 C-11,-22 -9,-48 0,-60 C9,-48 11,-22 0,0Z" transform="rotate(216)"/>
+                  <path fill="#C9A84C" opacity="0.30" d="M0,0 C-11,-22 -9,-48 0,-60 C9,-48 11,-22 0,0Z" transform="rotate(288)"/>
+                  <!-- Belső szirmok (5×, +36°) -->
+                  <path fill="#C9A84C" opacity="0.42" d="M0,0 C-8,-16 -6,-35 0,-44 C6,-35 8,-16 0,0Z" transform="rotate(36)"/>
+                  <path fill="#C9A84C" opacity="0.42" d="M0,0 C-8,-16 -6,-35 0,-44 C6,-35 8,-16 0,0Z" transform="rotate(108)"/>
+                  <path fill="#C9A84C" opacity="0.42" d="M0,0 C-8,-16 -6,-35 0,-44 C6,-35 8,-16 0,0Z" transform="rotate(180)"/>
+                  <path fill="#C9A84C" opacity="0.42" d="M0,0 C-8,-16 -6,-35 0,-44 C6,-35 8,-16 0,0Z" transform="rotate(252)"/>
+                  <path fill="#C9A84C" opacity="0.42" d="M0,0 C-8,-16 -6,-35 0,-44 C6,-35 8,-16 0,0Z" transform="rotate(324)"/>
+                  <!-- Középi körök -->
+                  <circle r="14" fill="#C9A84C" opacity="0.18"/>
+                  <circle r="8"  fill="#C9A84C" opacity="0.32"/>
+                  <circle r="4"  fill="#C9A84C" opacity="0.55"/>
+                  <!-- Vízfelszín és levelek -->
+                  <path d="M-55,18 C-35,8 -18,12 0,10 C18,12 35,8 55,18" fill="none" stroke="#C9A84C" stroke-width="1.2" opacity="0.25"/>
+                  <path d="M-70,24 C-50,18 -28,20 0,18 C28,20 50,18 70,24"  fill="none" stroke="#C9A84C" stroke-width="0.7" opacity="0.14"/>
+                  <path d="M0,12 C-20,4 -45,8 -55,20 C-38,13 -20,13 0,12Z" fill="#C9A84C" opacity="0.14"/>
+                  <path d="M0,12 C20,4 45,8 55,20 C38,13 20,13 0,12Z"       fill="#C9A84C" opacity="0.14"/>
+                </g>
+              </svg>
+              <div class="about__icon">✦</div>
+            </div>
+          </div>
+          <div class="about__text">
+            <span class="section__tag reveal">Üdvözöllek</span>
+            <h2 class="section__title reveal">
+              A feltöltődés<br /><em>helye</em>
+            </h2>
+            <p class="about__lead reveal">
+              Lazító, frissítő, regeneráló masszázsok egy helyen.
+            </p>
+            <p class="about__body reveal">
+              Tapasztald meg a testi és lelki feltöltődést egy nyugodt,
+              barátságos környezetben. Minden kezelés személyre szabottan,
+              odafigyeléssel és gondoskodással – mert te megérdemled a legjobb
+              törődést.
+            </p>
+            <div class="about__badges reveal">
+              <div class="badge">
+                <span class="badge__icon">🤍</span>
+                <span>Személyes figyelem</span>
+              </div>
+              <div class="badge">
+                <span class="badge__icon">🌿</span>
+                <span>Nyugodt légkör</span>
+              </div>
+              <div class="badge">
+                <span class="badge__icon">✨</span>
+                <span>Elérhető árak</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="services" id="services">
+        <div class="container">
+          <span class="section__tag reveal">Árlista</span>
+          <h2 class="section__title reveal">
+            Szolgáltatások<br /><em>& Árak</em>
+          </h2>
+
+          <div class="services__grid">
+            <!-- Svéd masszázs -->
+            <div class="service-card reveal">
+              <div class="service-card__header">
+                <span class="service-card__icon">🌸</span>
+                <h3 class="service-card__title">Svéd masszázs</h3>
+              </div>
+              <ul class="price-list">
+                <li class="price-item">
+                  <span class="price-item__label">30 perc</span>
+                  <span class="price-item__dots"></span>
+                  <span class="price-item__price">5 000 Ft</span>
+                </li>
+                <li class="price-item">
+                  <span class="price-item__label">60 perc</span>
+                  <span class="price-item__dots"></span>
+                  <span class="price-item__price">8 000 Ft</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Teljes test + köpöly -->
+            <div class="service-card service-card--featured reveal">
+              <div class="service-card__badge">Népszerű</div>
+              <div class="service-card__header">
+                <span class="service-card__icon">🫧</span>
+                <h3 class="service-card__title">Teljes test + köpöly</h3>
+              </div>
+              <ul class="price-list">
+                <li class="price-item">
+                  <span class="price-item__label">60 perc</span>
+                  <span class="price-item__dots"></span>
+                  <span class="price-item__price">11 000 Ft</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Hát-nyak-váll -->
+            <div class="service-card reveal">
+              <div class="service-card__header">
+                <span class="service-card__icon">💆</span>
+                <h3 class="service-card__title">Hát-nyak-váll</h3>
+              </div>
+              <ul class="price-list">
+                <li class="price-item">
+                  <span class="price-item__label">30 perc</span>
+                  <span class="price-item__dots"></span>
+                  <span class="price-item__price">4 500 Ft</span>
+                </li>
+                <li class="price-item">
+                  <span class="price-item__label">45 perc</span>
+                  <span class="price-item__dots"></span>
+                  <span class="price-item__price">6 500 Ft</span>
+                </li>
+                <li class="price-item">
+                  <span class="price-item__label">60 perc</span>
+                  <span class="price-item__dots"></span>
+                  <span class="price-item__price">8 500 Ft</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Kiegészítők -->
+            <div class="service-card service-card--extras reveal">
+              <div class="service-card__header">
+                <span class="service-card__icon">✦</span>
+                <h3 class="service-card__title">Kiegészítők</h3>
+              </div>
+              <ul class="price-list">
+                <li class="price-item">
+                  <span class="price-item__label">Köpöly</span>
+                  <span class="price-item__dots"></span>
+                  <span class="price-item__price">+2 000 Ft</span>
+                </li>
+                <li class="price-item">
+                  <span class="price-item__label">Talpmasszázs</span>
+                  <span class="price-item__dots"></span>
+                  <span class="price-item__price">4 000 Ft</span>
+                </li>
+                <li class="price-item">
+                  <span class="price-item__label">Arcmasszázs</span>
+                  <span class="price-item__dots"></span>
+                  <span class="price-item__price">4 000 Ft</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="services__note reveal">
+            * Az árak tartalmazzák a masszázsolajat. Időponthoz kötött, előzetes
+            egyeztetés szükséges.
+          </p>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <span class="section__tag reveal">Galéria</span>
+        <h2 class="section__title reveal">A kezelések<br /><em>világa</em></h2>
+      </div>
+      <div class="gallery__grid">
+        <div class="gallery__item gallery__item--tall reveal" data-index="0">
+          <div class="gallery__img gallery__img--1"></div>
+          <div class="gallery__overlay">
+            <span class="gallery__label">Svéd masszázs</span>
+          </div>
+        </div>
+        <div class="gallery__item reveal" data-index="1">
+          <div class="gallery__img gallery__img--2"></div>
+          <div class="gallery__overlay">
+            <span class="gallery__label">Köpölyes kezelés</span>
+          </div>
+        </div>
+        <div class="gallery__item reveal" data-index="2">
+          <div class="gallery__img gallery__img--3"></div>
+          <div class="gallery__overlay">
+            <span class="gallery__label">Illóolajos lazítás</span>
+          </div>
+        </div>
+        <div class="gallery__item gallery__item--wide reveal" data-index="3">
+          <div class="gallery__img gallery__img--4"></div>
+          <div class="gallery__overlay">
+            <span class="gallery__label">Hát-nyak-váll</span>
+          </div>
+        </div>
+        <div class="gallery__item reveal" data-index="4">
+          <div class="gallery__img gallery__img--5"></div>
+          <div class="gallery__overlay">
+            <span class="gallery__label">Talpmasszázs</span>
+          </div>
+        </div>
+        <div class="gallery__item reveal" data-index="5">
+          <div class="gallery__img gallery__img--6"></div>
+          <div class="gallery__overlay">
+            <span class="gallery__label">Arcmasszázs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Kép nagyítva">
+        <button class="lightbox__close" id="lightboxClose" aria-label="Bezárás">✕</button>
+        <button class="lightbox__prev" id="lightboxPrev" aria-label="Előző">‹</button>
+        <button class="lightbox__next" id="lightboxNext" aria-label="Következő">›</button>
+        <div class="lightbox__content">
+          <div class="lightbox__img" id="lightboxImg"></div>
+          <span class="lightbox__caption" id="lightboxCaption"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+      <div class="testimonials__bg-deco" aria-hidden="true"></div>
+      <div class="container">
+        <span class="section__tag reveal">Vélemények</span>
+        <h2 class="section__title reveal">Amit vendégeink<br /><em>mondanak</em></h2>
+
+        <div class="testimonials__track-wrap">
+          <div class="testimonials__track" id="testimonialsTrack">
+
+            <article class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 csillag">★★★★★</div>
+              <blockquote class="testimonial-card__quote">
+                "Csodálatos élmény volt! Vivi nagyon figyelmes és profi. Az ízületi fájdalmaim kezelés után szinte teljesen elmúltak. Melegen ajánlom mindenkinek!"
+              </blockquote>
+              <footer class="testimonial-card__footer">
+                <div class="testimonial-card__avatar">K</div>
+                <div>
+                  <cite class="testimonial-card__name">Kovács Katalin</cite>
+                  <span class="testimonial-card__treatment">Svéd masszázs · 60 perc</span>
+                </div>
+              </footer>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 csillag">★★★★★</div>
+              <blockquote class="testimonial-card__quote">
+                "Hetente járok vissza – ez az egyetlen hely ahol tényleg kikapcsolok. A köpölyes kezelés óta a hátfájásom megszűnt. Vivienne kezei csodát tesznek!"
+              </blockquote>
+              <footer class="testimonial-card__footer">
+                <div class="testimonial-card__avatar">N</div>
+                <div>
+                  <cite class="testimonial-card__name">Nagy Péterné</cite>
+                  <span class="testimonial-card__treatment">Teljes test + köpöly</span>
+                </div>
+              </footer>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 csillag">★★★★★</div>
+              <blockquote class="testimonial-card__quote">
+                "Stresszes munkanapok után ez az igazi regeneráció. A hát-nyak-váll masszázs után másnap is éreztem a hatást. Nagyon barátságos légkör, hamar vissza fogok menni!"
+              </blockquote>
+              <footer class="testimonial-card__footer">
+                <div class="testimonial-card__avatar">S</div>
+                <div>
+                  <cite class="testimonial-card__name">Szabó Anita</cite>
+                  <span class="testimonial-card__treatment">Hát-nyak-váll · 45 perc</span>
+                </div>
+              </footer>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 csillag">★★★★★</div>
+              <blockquote class="testimonial-card__quote">
+                "Az arcmasszázs után tíz évvel fiatalabbnak éreztem magam! Profi kéz, kellemes környezet, elérhető ár. Tökélön belül ez a legjobb masszőr szerintem."
+              </blockquote>
+              <footer class="testimonial-card__footer">
+                <div class="testimonial-card__avatar">H</div>
+                <div>
+                  <cite class="testimonial-card__name">Horváth Mária</cite>
+                  <span class="testimonial-card__treatment">Arcmasszázs + talpmasszázs</span>
+                </div>
+              </footer>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="testimonials__dots" id="testimonialsDots" role="tablist" aria-label="Vélemény lapozó"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+      <section class="contact" id="contact">
+        <div class="container contact__grid">
+          <div class="contact__text">
+            <span class="section__tag reveal">Kapcsolat</span>
+            <h2 class="section__title reveal">
+              Foglalj időpontot<br /><em>most</em>
+            </h2>
+            <p class="contact__lead reveal">
+              Keress bátran telefonon vagy írj üzenetet – igyekszem mielőbb
+              válaszolni!
+            </p>
+          </div>
+          <div class="contact__cards">
+            <a href="tel:+36203376190" class="contact-card reveal">
+              <span class="contact-card__icon">📞</span>
+              <div>
+                <span class="contact-card__label">Telefonszám</span>
+                <span class="contact-card__value">+36 20 337 6190</span>
+              </div>
+            </a>
+            <div class="contact-card reveal">
+              <span class="contact-card__icon">📍</span>
+              <div>
+                <span class="contact-card__label">Helyszín</span>
+                <span class="contact-card__value"
+                  >2315 Tököl, Csépi út 213.</span
+                >
+              </div>
+            </div>
+            <div class="contact-card reveal">
+              <span class="contact-card__icon">🌸</span>
+              <div>
+                <span class="contact-card__label">Masszőr</span>
+                <span class="contact-card__value">Sütő Vivi</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact__map">
+            <iframe
+              src="https://www.google.com/maps?q=Tököl%20Csépi%20út%20213&output=embed"
+              width="100%"
+              height="300"
+              style="border: 0; border-radius: 16px"
+              allowfullscreen=""
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo">Lélek Harmony</span>
+          <span class="footer__tagline">Masszázs by Vivienne</span>
+        </div>
+        <p class="footer__copy">
+          &copy; 2025 Lélek Harmony Masszázs. Minden jog fenntartva.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
