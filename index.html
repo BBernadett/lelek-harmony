@@ -27,6 +27,15 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- PROMO BANNER -->
+    <div id="promoBanner" class="promo-banner" role="note" aria-label="Promóciós ajánlat">
+      <p class="promo-banner__text">
+        🎁 <strong>Nyári akció:</strong> &minus;20% kedvezmény minden masszázsra júliusban!
+        <a href="#contact" class="promo-banner__cta">Foglalj most →</a>
+      </p>
+      <button id="promoBannerClose" class="promo-banner__close" aria-label="Banner bezárása">✕</button>
+    </div>
+
     <!-- NAV -->
     <header class="header" id="header">
       <nav class="nav container">
@@ -382,37 +391,37 @@
         </div>
         <div class="gallery__grid">
           <div class="gallery__item gallery__item--tall reveal" data-index="0">
-            <div class="gallery__img gallery__img--1"></div>
+            <img src="images/gallery/gallery-1.jpg" alt="Svéd masszázs – lazító egész testes kezelés" class="gallery__img" loading="lazy" />
             <div class="gallery__overlay">
               <span class="gallery__label">Svéd masszázs</span>
             </div>
           </div>
           <div class="gallery__item reveal" data-index="1">
-            <div class="gallery__img gallery__img--2"></div>
+            <img src="images/gallery/gallery-2.jpg" alt="Köpölyes kezelés – méregtelenítő masszázs" class="gallery__img" loading="lazy" />
             <div class="gallery__overlay">
               <span class="gallery__label">Köpölyes kezelés</span>
             </div>
           </div>
           <div class="gallery__item reveal" data-index="2">
-            <div class="gallery__img gallery__img--3"></div>
+            <img src="images/gallery/gallery-3.jpg" alt="Illóolajos lazítás – aromaterápiás masszázs" class="gallery__img" loading="lazy" />
             <div class="gallery__overlay">
               <span class="gallery__label">Illóolajos lazítás</span>
             </div>
           </div>
           <div class="gallery__item gallery__item--wide reveal" data-index="3">
-            <div class="gallery__img gallery__img--4"></div>
+            <img src="images/gallery/gallery-4.jpg" alt="Hát-nyak-váll masszázs – feszültség oldás" class="gallery__img" loading="lazy" />
             <div class="gallery__overlay">
               <span class="gallery__label">Hát-nyak-váll</span>
             </div>
           </div>
           <div class="gallery__item reveal" data-index="4">
-            <div class="gallery__img gallery__img--5"></div>
+            <img src="images/gallery/gallery-5.jpg" alt="Talpmasszázs – reflexológia" class="gallery__img" loading="lazy" />
             <div class="gallery__overlay">
               <span class="gallery__label">Talpmasszázs</span>
             </div>
           </div>
           <div class="gallery__item reveal" data-index="5">
-            <div class="gallery__img gallery__img--6"></div>
+            <img src="images/gallery/gallery-6.jpg" alt="Arcmasszázs – bőrfiatalító kezelés" class="gallery__img" loading="lazy" />
             <div class="gallery__overlay">
               <span class="gallery__label">Arcmasszázs</span>
             </div>
@@ -445,7 +454,7 @@
             ›
           </button>
           <div class="lightbox__content">
-            <div class="lightbox__img" id="lightboxImg"></div>
+            <img class="lightbox__img" id="lightboxImg" src="" alt="" />
             <span class="lightbox__caption" id="lightboxCaption"></span>
           </div>
         </div>
@@ -574,6 +583,24 @@
                 <span class="contact-card__value">+36 20 337 6190</span>
               </div>
             </a>
+            <a href="https://m.me/61580357836765" target="_blank" rel="noopener noreferrer" class="contact-card contact-card--messenger reveal">
+              <span class="contact-card__icon contact-card__icon--messenger">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="22" height="22">
+                  <path d="M12 2C6.477 2 2 6.145 2 11.259c0 2.821 1.316 5.338 3.387 7.042V22l3.086-1.687A10.85 10.85 0 0 0 12 20.518c5.523 0 10-4.145 10-9.259S17.523 2 12 2Z" fill="url(#msg-grad)"/>
+                  <path d="m6.5 14 2.789-4.2 2.475 2.1 2.739-2.1L17.5 14l-2.789-4.2-2.475 2.1-2.739-2.1L6.5 14Z" fill="#fff"/>
+                  <defs>
+                    <linearGradient id="msg-grad" x1="2" y1="12" x2="22" y2="12" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#0084FF"/>
+                      <stop offset="1" stop-color="#A334FA"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </span>
+              <div>
+                <span class="contact-card__label">Messenger</span>
+                <span class="contact-card__value">Írj üzenetet!</span>
+              </div>
+            </a>
             <div class="contact-card reveal">
               <span class="contact-card__icon">📍</span>
               <div>
@@ -616,9 +643,13 @@
         <p class="footer__copy">
           &copy; 2025 Lélek Harmony Masszázs. Minden jog fenntartva.
         </p>
+        <a href="adatvedelem.html" class="footer__link">
+          Adatkezelési tájékoztató
+        </a>
       </div>
     </footer>
 
+    <script src="js/config.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

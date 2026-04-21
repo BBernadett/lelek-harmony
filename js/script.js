@@ -2,6 +2,49 @@
    LÉLEK HARMONY – script.js
    ============================================ */
 
+// ============================================
+// PROMO BANNER — beállítások: js/config.js
+// ============================================
+(function initPromoBanner() {
+  if (typeof PROMO_CONFIG === 'undefined' || !PROMO_CONFIG.enabled) return;
+
+  const banner   = document.getElementById('promoBanner');
+  const textEl   = banner && banner.querySelector('.promo-banner__text');
+  const ctaEl    = banner && banner.querySelector('.promo-banner__cta');
+  if (!banner || !textEl) return;
+
+  const storageKey = `lh_promo_${PROMO_CONFIG.id}`;
+  if (localStorage.getItem(storageKey) === 'closed') return;
+
+  // Szöveg és CTA beállítása config alapján
+  textEl.innerHTML = PROMO_CONFIG.text +
+    (PROMO_CONFIG.cta
+      ? ` <a href="${PROMO_CONFIG.cta.href}" class="promo-banner__cta">${PROMO_CONFIG.cta.label}</a>`
+      : '');
+  if (ctaEl) ctaEl.remove();
+
+  banner.classList.add('promo-banner--visible');
+
+  const headerEl = document.getElementById('header');
+
+  function applyOffset() {
+    if (headerEl) headerEl.style.top = banner.offsetHeight + 'px';
+  }
+  applyOffset();
+  window.addEventListener('resize', applyOffset, { passive: true });
+
+  document.getElementById('promoBannerClose').addEventListener('click', () => {
+    banner.style.height = banner.offsetHeight + 'px';
+    requestAnimationFrame(() => banner.classList.add('promo-banner--closing'));
+    setTimeout(() => {
+      banner.style.display = 'none';
+      if (headerEl) headerEl.style.top = '';
+      localStorage.setItem(storageKey, 'closed');
+      window.removeEventListener('resize', applyOffset);
+    }, 370);
+  });
+})();
+
 // --- Sticky header ---
 const header = document.getElementById("header");
 window.addEventListener("scroll", () => {
@@ -80,23 +123,20 @@ const lightboxClose = document.getElementById("lightboxClose");
 const lightboxPrev  = document.getElementById("lightboxPrev");
 const lightboxNext  = document.getElementById("lightboxNext");
 
-// Map index → background class + caption
-const galleryData = [
-  { cls: "gallery__img--1", label: "Svéd masszázs" },
-  { cls: "gallery__img--2", label: "Köpölyes kezelés" },
-  { cls: "gallery__img--3", label: "Illóolajos lazítás" },
-  { cls: "gallery__img--4", label: "Hát-nyak-váll" },
-  { cls: "gallery__img--5", label: "Talpmasszázs" },
-  { cls: "gallery__img--6", label: "Arcmasszázs" },
-];
-
 let currentIndex = 0;
 
 function openLightbox(index) {
-  currentIndex = ((index % galleryData.length) + galleryData.length) % galleryData.length;
-  const data = galleryData[currentIndex];
-  lightboxImg.className = `lightbox__img ${data.cls}`;
-  lightboxCap.textContent = data.label;
+  const total = galleryItems.length;
+  currentIndex = ((index % total) + total) % total;
+
+  // Forrás és felirat közvetlenül a DOM-ból
+  const item  = galleryItems[currentIndex];
+  const img   = item.querySelector(".gallery__img");
+  const label = item.querySelector(".gallery__label");
+
+  lightboxImg.src = img ? img.src : "";
+  lightboxImg.alt = img ? img.alt : "";
+  lightboxCap.textContent = label ? label.textContent : "";
   lightbox.classList.add("open");
   document.body.style.overflow = "hidden";
 }
