@@ -454,19 +454,38 @@ ul {
   align-items: center;
   justify-content: center;
 }
-.about__deco-inner svg {
-  position: absolute;
-  inset: 0;
+
+/* Vivi portréfotó stílus */
+.about__photo-frame {
+  padding: 3px;
+  border-radius: 26px 26px 8px 8px;
+  background: linear-gradient(
+    90deg,
+    var(--gold-dark) 25%,
+    var(--gold-light) 50%,
+    var(--gold-dark) 75%
+  );
+  background-size: 200% auto;
+  animation: shimmer 4s linear infinite;
+  box-shadow: 0 12px 48px rgba(107, 79, 46, 0.22);
+  display: inline-block;
+}
+.about__deco-inner--photo {
+  width: 260px;
+  height: 320px;
+  border-radius: 24px 24px 6px 6px;
+  overflow: hidden;
+}
+.about__photo {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: 75% 0%;
+  display: block;
+  transition: transform 0.6s ease;
 }
-.about__icon {
-  font-size: 5rem;
-  color: var(--gold);
-  position: relative;
-  z-index: 1;
-  text-shadow: 0 4px 20px rgba(201, 168, 76, 0.3);
-  animation: gentlePulse 4s ease-in-out infinite;
+.about__photo-frame:hover .about__photo {
+  transform: scale(1.04);
 }
 @keyframes gentlePulse {
   0%,
@@ -584,6 +603,46 @@ ul {
   background: linear-gradient(135deg, var(--brown) 0%, #4a3520 100%);
   border-color: transparent;
 }
+.service-card--bg-1 {
+  background-image:
+    linear-gradient(rgba(253, 250, 244, 0.72), rgba(253, 250, 244, 0.72)),
+    url('../images/gallery/gallery-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.service-card--bg-2 {
+  background-image:
+    linear-gradient(rgba(58, 40, 20, 0.72), rgba(74, 53, 32, 0.72)),
+    url('../images/gallery/gallery-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.service-card--bg-4 {
+  background-image:
+    linear-gradient(rgba(253, 250, 244, 0.72), rgba(253, 250, 244, 0.72)),
+    url('../images/gallery/gallery-4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.service-card--bg-5 {
+  background-image:
+    linear-gradient(rgba(253, 250, 244, 0.72), rgba(253, 250, 244, 0.72)),
+    url('../images/gallery/gallery-5.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.service-card--bg-sport {
+  background-image:
+    linear-gradient(rgba(253, 250, 244, 0.72), rgba(253, 250, 244, 0.72)),
+    url('../images/gallery/sport_A.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .service-card--featured .service-card__title,
 .service-card--featured .price-item__label,
 .service-card--featured .price-item__price {
@@ -606,7 +665,14 @@ ul {
 
 .service-card--extras {
   border: 1.5px dashed var(--beige-dark);
-  background: rgba(253, 250, 244, 0.6);
+}
+.service-card--extras.service-card--bg-5 {
+  background-image:
+    linear-gradient(rgba(253, 250, 244, 0.72), rgba(253, 250, 244, 0.72)),
+    url('../images/gallery/gallery-5.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .service-card__badge {
@@ -662,6 +728,20 @@ ul {
 }
 .price-item:last-child {
   border-bottom: none;
+}
+
+.price-item--group {
+  border-bottom: none;
+  padding-bottom: 0.1rem;
+  padding-top: 0.9rem;
+}
+.price-item--group:first-child { padding-top: 0; }
+.price-item__label--sub {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
 }
 
 .price-item__label {
@@ -961,7 +1041,7 @@ a.contact-card--messenger:hover {
 .gallery__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 260px 260px;
+  grid-auto-rows: 260px;
   gap: 6px;
   margin-top: 0.5rem;
 }
@@ -1318,7 +1398,7 @@ a.contact-card--messenger:hover {
     transform: translateY(-12px);
   }
 }
-.about__deco-inner {
+.about__deco-inner:not(.about__deco-inner--photo) {
   animation: floatY 6s ease-in-out infinite;
 }
 
@@ -1472,7 +1552,15 @@ a.contact-card:hover {
     gap: 3rem;
   }
   .about__deco {
-    display: none;
+    justify-content: center;
+  }
+  .about__photo-frame {
+    border-radius: 18px 18px 6px 6px;
+  }
+  .about__deco-inner--photo {
+    width: 180px;
+    height: 220px;
+    border-radius: 16px 16px 4px 4px;
   }
   .services__grid {
     grid-template-columns: 1fr;
@@ -1484,7 +1572,7 @@ a.contact-card:hover {
 
   .gallery__grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 220px 220px 220px;
+    grid-auto-rows: 220px;
   }
   .gallery__item--tall {
     grid-row: span 1;

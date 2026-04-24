@@ -28,12 +28,24 @@
   </head>
   <body>
     <!-- PROMO BANNER -->
-    <div id="promoBanner" class="promo-banner" role="note" aria-label="Promóciós ajánlat">
+    <div
+      id="promoBanner"
+      class="promo-banner"
+      role="note"
+      aria-label="Promóciós ajánlat"
+    >
       <p class="promo-banner__text">
-        🎁 <strong>Nyári akció:</strong> &minus;20% kedvezmény minden masszázsra júliusban!
+        🎁 <strong>Nyári akció:</strong> &minus;20% kedvezmény minden masszázsra
+        júliusban!
         <a href="#contact" class="promo-banner__cta">Foglalj most →</a>
       </p>
-      <button id="promoBannerClose" class="promo-banner__close" aria-label="Banner bezárása">✕</button>
+      <button
+        id="promoBannerClose"
+        class="promo-banner__close"
+        aria-label="Banner bezárása"
+      >
+        ✕
+      </button>
     </div>
 
     <!-- NAV -->
@@ -82,12 +94,20 @@
       <section class="about" id="about">
         <div class="container about__grid">
           <div class="about__deco reveal">
-            <div class="about__deco-inner">
-              <!-- Lotus flower — spa / massage theme -->
+            <div class="about__photo-frame">
+            <div class="about__deco-inner about__deco-inner--photo">
+              <img
+                src="images/gallery/gallery_12.jpeg"
+                alt="Sütő Vivi – masszőr, Lélek Harmony Masszázs"
+                class="about__photo"
+                loading="eager"
+              />
+              <!-- hidden lotus SVG kept as fallback if image fails -->
               <svg
                 viewBox="0 0 200 200"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
+                style="display:none"
               >
                 <g transform="translate(100,115)">
                   <!-- Outer petals — layer 1 (5×, aligned) -->
@@ -243,7 +263,7 @@
                   />
                 </g>
               </svg>
-              <div class="about__icon">✦</div>
+            </div>
             </div>
           </div>
           <div class="about__text">
@@ -288,7 +308,7 @@
 
           <div class="services__grid">
             <!-- Svéd masszázs -->
-            <div class="service-card reveal">
+            <div class="service-card service-card--bg-1 reveal">
               <div class="service-card__header">
                 <span class="service-card__icon">🌸</span>
                 <h3 class="service-card__title">Svéd masszázs</h3>
@@ -308,7 +328,7 @@
             </div>
 
             <!-- Teljes test + köpöly -->
-            <div class="service-card service-card--featured reveal">
+            <div class="service-card service-card--featured service-card--bg-2 reveal">
               <div class="service-card__badge">Népszerű</div>
               <div class="service-card__header">
                 <span class="service-card__icon">🫧</span>
@@ -324,7 +344,7 @@
             </div>
 
             <!-- Hát-nyak-váll -->
-            <div class="service-card reveal">
+            <div class="service-card service-card--bg-4 reveal">
               <div class="service-card__header">
                 <span class="service-card__icon">💆</span>
                 <h3 class="service-card__title">Hát-nyak-váll</h3>
@@ -348,8 +368,44 @@
               </ul>
             </div>
 
+            <!-- Sportmasszázs -->
+            <div class="service-card service-card--bg-sport reveal">
+              <div class="service-card__header">
+                <span class="service-card__icon">💪</span>
+                <h3 class="service-card__title">Sportmasszázs</h3>
+              </div>
+              <ul class="price-list">
+                <li class="price-item price-item--group">
+                  <span class="price-item__label price-item__label--sub">Teljes test</span>
+                </li>
+                <li class="price-item">
+                  <span class="price-item__label">60 perc</span>
+                  <span class="price-item__dots"></span>
+                  <span class="price-item__price">12 000 Ft</span>
+                </li>
+                <li class="price-item">
+                  <span class="price-item__label">90 perc</span>
+                  <span class="price-item__dots"></span>
+                  <span class="price-item__price">14 000 Ft</span>
+                </li>
+                <li class="price-item">
+                  <span class="price-item__label">120 perc</span>
+                  <span class="price-item__dots"></span>
+                  <span class="price-item__price">20 000 Ft</span>
+                </li>
+                <li class="price-item price-item--group">
+                  <span class="price-item__label price-item__label--sub">Testrészenként</span>
+                </li>
+                <li class="price-item">
+                  <span class="price-item__label">60 perc</span>
+                  <span class="price-item__dots"></span>
+                  <span class="price-item__price">8 000 Ft</span>
+                </li>
+              </ul>
+            </div>
+
             <!-- Kiegészítők -->
-            <div class="service-card service-card--extras reveal">
+            <div class="service-card service-card--extras service-card--bg-5 reveal">
               <div class="service-card__header">
                 <span class="service-card__icon">✦</span>
                 <h3 class="service-card__title">Kiegészítők</h3>
@@ -391,40 +447,24 @@
         </div>
         <div class="gallery__grid">
           <div class="gallery__item gallery__item--tall reveal" data-index="0">
-            <img src="images/gallery/gallery-1.jpg" alt="Svéd masszázs – lazító egész testes kezelés" class="gallery__img" loading="lazy" />
-            <div class="gallery__overlay">
-              <span class="gallery__label">Svéd masszázs</span>
-            </div>
+            <img src="images/gallery/gallery_7.jpeg" alt="A szalon bejárata – spa illusztráció az ajtón" class="gallery__img" loading="lazy" />
+            <div class="gallery__overlay"></div>
           </div>
           <div class="gallery__item reveal" data-index="1">
-            <img src="images/gallery/gallery-2.jpg" alt="Köpölyes kezelés – méregtelenítő masszázs" class="gallery__img" loading="lazy" />
-            <div class="gallery__overlay">
-              <span class="gallery__label">Köpölyes kezelés</span>
-            </div>
+            <img src="images/gallery/gallery_8.jpeg" alt="Hangulatvilágítás – kék LED fény a folyosón" class="gallery__img" loading="lazy" />
+            <div class="gallery__overlay"></div>
           </div>
           <div class="gallery__item reveal" data-index="2">
-            <img src="images/gallery/gallery-3.jpg" alt="Illóolajos lazítás – aromaterápiás masszázs" class="gallery__img" loading="lazy" />
-            <div class="gallery__overlay">
-              <span class="gallery__label">Illóolajos lazítás</span>
-            </div>
+            <img src="images/gallery/gallery_9.jpeg" alt="Váró terület – lótuszos szőnyeg, kávégép" class="gallery__img" loading="lazy" />
+            <div class="gallery__overlay"></div>
           </div>
-          <div class="gallery__item gallery__item--wide reveal" data-index="3">
-            <img src="images/gallery/gallery-4.jpg" alt="Hát-nyak-váll masszázs – feszültség oldás" class="gallery__img" loading="lazy" />
-            <div class="gallery__overlay">
-              <span class="gallery__label">Hát-nyak-váll</span>
-            </div>
+          <div class="gallery__item reveal" data-index="3">
+            <img src="images/gallery/gallery_10.jpeg" alt="Kezelőszoba – masszázságy, gyertyák, termékek" class="gallery__img" loading="lazy" />
+            <div class="gallery__overlay"></div>
           </div>
           <div class="gallery__item reveal" data-index="4">
-            <img src="images/gallery/gallery-5.jpg" alt="Talpmasszázs – reflexológia" class="gallery__img" loading="lazy" />
-            <div class="gallery__overlay">
-              <span class="gallery__label">Talpmasszázs</span>
-            </div>
-          </div>
-          <div class="gallery__item reveal" data-index="5">
-            <img src="images/gallery/gallery-6.jpg" alt="Arcmasszázs – bőrfiatalító kezelés" class="gallery__img" loading="lazy" />
-            <div class="gallery__overlay">
-              <span class="gallery__label">Arcmasszázs</span>
-            </div>
+            <img src="images/gallery/gallery_11.jpeg" alt="Masszázságy kék hangulat fénnyel" class="gallery__img" loading="lazy" />
+            <div class="gallery__overlay"></div>
           </div>
         </div>
 
@@ -583,15 +623,40 @@
                 <span class="contact-card__value">+36 20 337 6190</span>
               </div>
             </a>
-            <a href="https://m.me/61580357836765" target="_blank" rel="noopener noreferrer" class="contact-card contact-card--messenger reveal">
+            <a
+              href="https://m.me/61580357836765"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-card contact-card--messenger reveal"
+            >
               <span class="contact-card__icon contact-card__icon--messenger">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="22" height="22">
-                  <path d="M12 2C6.477 2 2 6.145 2 11.259c0 2.821 1.316 5.338 3.387 7.042V22l3.086-1.687A10.85 10.85 0 0 0 12 20.518c5.523 0 10-4.145 10-9.259S17.523 2 12 2Z" fill="url(#msg-grad)"/>
-                  <path d="m6.5 14 2.789-4.2 2.475 2.1 2.739-2.1L17.5 14l-2.789-4.2-2.475 2.1-2.739-2.1L6.5 14Z" fill="#fff"/>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  width="22"
+                  height="22"
+                >
+                  <path
+                    d="M12 2C6.477 2 2 6.145 2 11.259c0 2.821 1.316 5.338 3.387 7.042V22l3.086-1.687A10.85 10.85 0 0 0 12 20.518c5.523 0 10-4.145 10-9.259S17.523 2 12 2Z"
+                    fill="url(#msg-grad)"
+                  />
+                  <path
+                    d="m6.5 14 2.789-4.2 2.475 2.1 2.739-2.1L17.5 14l-2.789-4.2-2.475 2.1-2.739-2.1L6.5 14Z"
+                    fill="#fff"
+                  />
                   <defs>
-                    <linearGradient id="msg-grad" x1="2" y1="12" x2="22" y2="12" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#0084FF"/>
-                      <stop offset="1" stop-color="#A334FA"/>
+                    <linearGradient
+                      id="msg-grad"
+                      x1="2"
+                      y1="12"
+                      x2="22"
+                      y2="12"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#0084FF" />
+                      <stop offset="1" stop-color="#A334FA" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -606,7 +671,7 @@
               <div>
                 <span class="contact-card__label">Helyszín</span>
                 <span class="contact-card__value"
-                  >2315 Tököl, Csépi út 213.</span
+                  >2316 Tököl, Csépi út 213.</span
                 >
               </div>
             </div>
