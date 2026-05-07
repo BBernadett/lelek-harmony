@@ -6,6 +6,8 @@
     <title>Adatkezelési tájékoztató – Lélek Harmony Masszázs by Vivienne</title>
     <meta name="description" content="Adatkezelési tájékoztató – Lélek Harmony Masszázs by Vivienne, Tököl. GDPR-megfelelő adatvédelmi szabályzat." />
     <meta name="robots" content="noindex, follow" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -20,7 +22,10 @@
           <span class="nav__logo-main">Lélek Harmony</span>
           <span class="nav__logo-sub">Masszázs by Vivienne</span>
         </a>
-        <ul class="nav__menu">
+        <button class="nav__toggle" id="navToggle" aria-label="Menü megnyitása">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__menu" id="navMenu">
           <li><a href="index.html#about" class="nav__link">Rólam</a></li>
           <li><a href="index.html#services" class="nav__link">Szolgáltatások</a></li>
           <li><a href="index.html#contact" class="nav__link nav__link--cta">Kapcsolat</a></li>
@@ -43,7 +48,7 @@
             <h2>1. Az adatkezelő adatai</h2>
             <table class="policy-table">
               <tr><td>Név</td><td>Sütő Vivienne (Lélek Harmony Masszázs)</td></tr>
-              <tr><td>Székhely</td><td>2315 Tököl, Csépi út 213.</td></tr>
+              <tr><td>Székhely</td><td>2316 Tököl, Csépi út 213.</td></tr>
               <tr><td>Telefonszám</td><td>+36 20 337 6190</td></tr>
               <tr><td>Tevékenység</td><td>Masszázs szolgáltatás (egyéni vállalkozó)</td></tr>
             </table>
@@ -151,10 +156,12 @@
           <span class="footer__logo">Lélek Harmony</span>
           <span class="footer__tagline">Masszázs by Vivienne</span>
         </div>
-        <p class="footer__copy">&copy; 2025 Lélek Harmony Masszázs. Minden jog fenntartva.</p>
+        <p class="footer__copy">&copy; 2026 Lélek Harmony Masszázs. Minden jog fenntartva.</p>
         <a href="adatvedelem.html" class="footer__link">Adatkezelési tájékoztató</a>
       </div>
     </footer>
 
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
