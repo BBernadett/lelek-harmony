@@ -663,6 +663,60 @@ ul {
   opacity: 1;
 }
 
+.service-card--new {
+  grid-column: span 2;
+  border: 1.5px solid rgba(201, 168, 76, 0.4);
+  background: linear-gradient(135deg, rgba(253, 250, 244, 1) 0%, rgba(240, 233, 220, 0.6) 100%);
+}
+
+.service-card__badge--new {
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+}
+
+.service-card__desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 1.2rem;
+}
+
+.service-card__benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.2rem;
+  margin-bottom: 1.4rem;
+  padding: 0.9rem 1.1rem;
+  background: rgba(201, 168, 76, 0.08);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(201, 168, 76, 0.18);
+}
+
+.service-card__benefit {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--brown);
+}
+
+.service-card__components {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  margin-bottom: 1.4rem;
+}
+
+.service-card__components span {
+  font-size: 0.88rem;
+  color: var(--brown);
+  font-weight: 500;
+}
+
+.service-card__note {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 0.75rem;
+}
+
 .service-card--extras {
   border: 1.5px dashed var(--beige-dark);
 }
@@ -1564,6 +1618,9 @@ a.contact-card:hover {
   }
   .services__grid {
     grid-template-columns: 1fr;
+  }
+  .service-card--new {
+    grid-column: span 1;
   }
   .contact__grid {
     grid-template-columns: 1fr;
