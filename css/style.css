@@ -666,7 +666,12 @@ ul {
 .service-card--new {
   grid-column: span 2;
   border: 1.5px solid rgba(201, 168, 76, 0.4);
-  background: linear-gradient(135deg, rgba(253, 250, 244, 1) 0%, rgba(240, 233, 220, 0.6) 100%);
+  background-image:
+    linear-gradient(rgba(253, 250, 244, 0.72), rgba(253, 250, 244, 0.72)),
+    url('../images/gallery/cellulit.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .service-card__badge--new {
@@ -1621,6 +1626,19 @@ a.contact-card:hover {
   }
   .service-card--new {
     grid-column: span 1;
+    text-align: center;
+  }
+  .service-card--new .service-card__header {
+    justify-content: center;
+  }
+  .service-card--new .service-card__benefits {
+    justify-content: center;
+  }
+  .service-card--new .service-card__components {
+    justify-content: center;
+  }
+  .service-card--new .price-item {
+    justify-content: center;
   }
   .contact__grid {
     grid-template-columns: 1fr;
