@@ -1628,6 +1628,11 @@ a.contact-card:hover {
     grid-column: span 1;
     text-align: center;
   }
+  .service-card--new .service-card__badge {
+    position: static;
+    display: inline-block;
+    margin: 0 auto 1.2rem;
+  }
   .service-card--new .service-card__header {
     justify-content: center;
   }
