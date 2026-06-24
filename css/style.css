@@ -648,6 +648,9 @@ ul {
 .service-card--featured .price-item__price {
   color: var(--cream);
 }
+.service-card--featured .service-card__header {
+  padding-right: 5rem;
+}
 .service-card--featured .price-item__dots {
   background-image: radial-gradient(
     circle,
